@@ -1,9 +1,9 @@
 version: "3.7"
 services:
-  dev:
+  nlp-dev:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: dockerfile.dev
     image: nlp-dev:latest
     container_name: nlp-dev
     volumes:
@@ -12,10 +12,10 @@ services:
       - '8080:8080'
     tty: true
 
-  notebook:
+  nlp-notebook:
     build:
       context: .
-      dockerfile: Dockerfile.jup
+      dockerfile: dockerfile.jup
     image: jupyter/datascience-notebook
     ports:
       - "8888:8888"

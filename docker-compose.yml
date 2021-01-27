@@ -13,9 +13,6 @@ services:
     tty: true
 
   nlp-notebook:
-    build:
-      context: .
-      dockerfile: dockerfile.jup
     image: jupyter/datascience-notebook
     ports:
       - "8888:8888"
